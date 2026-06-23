@@ -54,14 +54,72 @@
         .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); will-change: opacity, transform; }
         .reveal.in-view { opacity: 1; transform: translateY(0); }
 
-        /* BUTTONS */
-        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 12px; font-weight: 600; font-size: 15px; cursor: pointer; border: 1px solid transparent; transition: all 0.3s ease; white-space: nowrap; }
-        .btn-primary { background: #fff; color: #0a0b0e; }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(255,255,255,.15); }
-        .btn-ghost { background: rgba(255,255,255,.04); border-color: var(--line); color: var(--text); backdrop-filter: blur(8px); }
-        .btn-ghost:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.2); transform: translateY(-2px); }
-        .btn-accent { background: linear-gradient(120deg, var(--accent), var(--accent-2)); color: #fff; border: 1px solid rgba(255,255,255,0.2); }
-        .btn-accent:hover { transform: translateY(-2px); box-shadow: 0 12px 34px rgba(107,124,255,.5); }
+        /* =========================================
+           AURA.BUILD BUTTON COMPONENTS (CSS ONLY)
+           ========================================= */
+        .btn {
+            position: relative; display: inline-flex; justify-content: center; align-items: center; gap: 8px;
+            padding: 14px 28px; border-radius: 99px; font-weight: 600; font-size: 15px; cursor: pointer;
+            text-decoration: none; border: none; outline: none; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            z-index: 1; overflow: hidden; white-space: nowrap;
+        }
+
+        /* 1. Animated Gradient Border Button (Hero Primary CTA) */
+        .btn-glow-border {
+            background: var(--bg-2); color: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        .btn-glow-border::before {
+            content: ''; position: absolute; inset: -2px; z-index: -2;
+            background: conic-gradient(from 0deg, transparent 0%, var(--accent-3) 25%, var(--accent) 50%, transparent 50%);
+            animation: spin-bg 3s linear infinite;
+        }
+        .btn-glow-border::after {
+            content: ''; position: absolute; inset: 2px; z-index: -1;
+            background: var(--bg-2); border-radius: 99px; transition: background 0.3s;
+        }
+        .btn-glow-border:hover { transform: scale(1.03); box-shadow: 0 10px 30px rgba(107,124,255,0.4); }
+        .btn-glow-border:hover::after { background: rgba(9,10,12,0.8); }
+        @keyframes spin-bg { 100% { transform: rotate(360deg); } }
+
+        /* 2. Glassmorphism Button (Header & Secondary CTA) */
+        .btn-glass {
+            background: rgba(255,255,255,0.03); color: var(--text);
+            border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            padding: 12px 24px; /* Slightly smaller for header */
+        }
+        .btn-glass::before {
+            content: ''; position: absolute; inset: 0; z-index: -1;
+            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.05), transparent);
+            transform: translateX(-100%); transition: 0.5s;
+        }
+        .btn-glass:hover {
+            background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.3);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3), inset 0 0 15px rgba(255,255,255,0.05);
+            transform: translateY(-2px); color: #fff;
+        }
+        .btn-glass:hover::before { transform: translateX(100%); }
+
+        /* 3. Gradient Box-Shadow Button (Bottom CTA) */
+        .btn-gradient-shadow {
+            background: linear-gradient(135deg, var(--accent), var(--accent-3));
+            color: #fff; border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 10px 30px -10px var(--accent); padding: 16px 36px; font-size: 16px;
+        }
+        .btn-gradient-shadow:hover {
+            box-shadow: 0 15px 40px -5px var(--accent-3); transform: translateY(-3px); filter: brightness(1.1);
+        }
+
+        /* 4. Neon Outline Button (Map Overlay) */
+        .btn-outline-glow {
+            background: rgba(9,10,12,0.8); color: #fff;
+            border: 1px solid var(--accent-3); backdrop-filter: blur(4px);
+            box-shadow: 0 0 15px rgba(79,209,224,0.2), inset 0 0 10px rgba(79,209,224,0.1);
+        }
+        .btn-outline-glow:hover {
+            background: rgba(79,209,224,0.15); border-color: #fff;
+            box-shadow: 0 0 25px rgba(79,209,224,0.5), inset 0 0 20px rgba(79,209,224,0.3);
+        }
 
         .eyebrow { display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: .08em; color: var(--accent-3); margin-bottom: 16px; text-transform: uppercase; }
         .sec-head { max-width: 680px; margin: 0 auto 56px; text-align: center; }
@@ -79,7 +137,7 @@
         .nav-links a:hover { color: #fff; }
         @media(max-width:880px){ .nav-links { display: none; } }
 
-        /* HERO WITH IMAGE BACKGROUND */
+        /* HERO WITH FULL BACKGROUND IMAGE */
         .hero { padding: 180px 0 120px; text-align: center; position: relative; overflow: hidden; min-height: 85vh; display: flex; flex-direction: column; justify-content: center; }
         .hero-bg { position: absolute; inset: 0; z-index: -2; background-image: url('Katalog-Tempat-Sewa-Stamper-Kuda-Kodok-Bandung.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; filter: brightness(0.6) contrast(1.1); transform: scale(1.05); }
         .hero-overlay { position: absolute; inset: 0; z-index: -1; background: linear-gradient(to bottom, rgba(9,10,12,0.8) 0%, rgba(9,10,12,0.5) 50%, rgba(9,10,12,1) 100%); backdrop-filter: blur(3px); }
@@ -106,50 +164,23 @@
         .visual img { width: 100%; height: 100%; object-fit: cover; border-radius: 16px; }
         @media(max-width:840px){ .row { grid-template-columns: 1fr; gap: 40px; } .row + .row { margin-top: 80px; } .row.flip .copy { order: 0; } }
 
-        /* GLASSMORPHIC CARD GRID (AURA.BUILD INSPIRED) */
-        .glass-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-        }
-        .glass-card {
-            background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: var(--r-lg); padding: 40px 30px;
-            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative; overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-        .glass-card::before {
-            content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
-            background: linear-gradient(to right, transparent, rgba(255,255,255,0.05), transparent);
-            transform: skewX(-20deg); transition: 0.5s;
-        }
-        .glass-card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(107,124,255,0.5);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(107,124,255,0.2) inset;
-        }
+        /* GLASSMORPHIC CARD GRID */
+        .glass-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .glass-card { background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--r-lg); padding: 40px 30px; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        .glass-card::before { content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(to right, transparent, rgba(255,255,255,0.05), transparent); transform: skewX(-20deg); transition: 0.5s; }
+        .glass-card:hover { transform: translateY(-10px); border-color: rgba(107,124,255,0.5); box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(107,124,255,0.2) inset; }
         .glass-card:hover::before { left: 150%; }
-        
-        .glass-card .ico {
-            width: 50px; height: 50px; border-radius: 14px; margin-bottom: 24px; display: grid; place-items: center;
-            background: linear-gradient(135deg, rgba(79,209,224,.15), rgba(107,124,255,.15));
-            border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
+        .glass-card .ico { width: 50px; height: 50px; border-radius: 14px; margin-bottom: 24px; display: grid; place-items: center; background: linear-gradient(135deg, rgba(79,209,224,.15), rgba(107,124,255,.15)); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
         .glass-card .ico svg { width: 24px; height: 24px; stroke: var(--accent-3); stroke-width: 2; fill: none; }
         .glass-card h3 { font-size: 20px; margin-bottom: 12px; color: #fff; font-weight: 700; }
         .glass-card p { color: var(--muted); font-size: 15.5px; line-height: 1.6; }
-        
         @media(max-width:960px){ .glass-grid { grid-template-columns: repeat(2, 1fr); } }
         @media(max-width:600px){ .glass-grid { grid-template-columns: 1fr; } }
 
         /* MANIFESTO */
         .manifesto { padding: 140px 0; text-align: center; }
         .manifesto .eyebrow { display: block; text-align: center; margin-bottom: 24px; color: #ff5c5c; }
-        .manifesto .big {
-            font-size: clamp(28px, 4.6vw, 52px); font-weight: 700; line-height: 1.3;
-            letter-spacing: -.03em; max-width: 900px; margin: 0 auto; color: #fff;
-        }
+        .manifesto .big { font-size: clamp(28px, 4.6vw, 52px); font-weight: 700; line-height: 1.3; letter-spacing: -.03em; max-width: 900px; margin: 0 auto; color: #fff; }
 
         /* GLASSMORPHIC TESTIMONIAL MARQUEE */
         .testi-section { padding: 100px 0; background: radial-gradient(ellipse at center, rgba(107,124,255,0.05) 0%, transparent 70%); overflow: hidden; }
@@ -281,7 +312,9 @@
                     <a href="#testimoni">Ulasan Klien</a>
                 </div>
                 <div class="nav-cta">
-                    <a href="https://wa.me/6285283212205?text=*Halo Admin PT. Mandiri Bersama, saya butuh bantuan Jasa Coring / Sewa Alat Konstruksi segera...*" target="_blank" class="btn btn-primary">Konsultasi Gratis</a>
+                    <a href="https://wa.me/6285283212205?text=*Halo Admin PT. Mandiri Bersama, saya butuh bantuan Jasa Coring / Sewa Alat Konstruksi segera...*" target="_blank" class="btn btn-glass">
+                        Konsultasi Gratis
+                    </a>
                 </div>
             </nav>
         </div>
@@ -306,11 +339,13 @@
             </p>
             
             <div class="hero-cta">
-                <a href="https://wa.me/6285283212205?text=*Halo Admin PT. Mandiri Bersama, saya tertarik dengan layanan Jasa Coring Beton / Sewa Alat. Tolong jadwalkan survei lokasi...*" target="_blank" class="btn btn-accent">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="margin-right:6px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                <a href="https://wa.me/6285283212205?text=*Halo Admin PT. Mandiri Bersama, saya tertarik dengan layanan Jasa Coring Beton / Sewa Alat. Tolong jadwalkan survei lokasi...*" target="_blank" class="btn btn-glow-border">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
                     Jadwalkan Survei Gratis
                 </a>
-                <a href="#platform" class="btn btn-ghost">Lihat Spesifikasi Layanan ↓</a>
+                <a href="#platform" class="btn btn-glass">
+                    Lihat Spesifikasi Layanan ↓
+                </a>
             </div>
         </div>
     </section>
@@ -567,7 +602,9 @@
                     <h2>Amankan Jadwal Konstruksi Anda!</h2>
                     <p>Jangan biarkan proyek tertunda karena masalah pembongkaran atau kekurangan alat berat. Konsultasikan bersama ahlinya sekarang.</p>
                     <div class="hero-cta">
-                        <a href="https://wa.me/6285283212205?text=*Halo Admin PT. Mandiri Bersama, saya butuh bantuan darurat untuk jasa coring beton / sewa alat proyek. Bisa bantu cek ketersediaan?*" target="_blank" class="btn btn-primary" style="padding: 16px 36px; font-size: 17px; border-radius: 16px;">💬 Chat WhatsApp Tim Kami</a>
+                        <a href="https://wa.me/6285283212205?text=*Halo Admin PT. Mandiri Bersama, saya butuh bantuan darurat untuk jasa coring beton / sewa alat proyek. Bisa bantu cek ketersediaan?*" target="_blank" class="btn btn-gradient-shadow">
+                            💬 Chat WhatsApp Tim Kami
+                        </a>
                     </div>
                 </div>
             </div>
@@ -592,7 +629,7 @@
                             <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x2e68e5d5f0a0549b:0xe787630c66e76303?entry=gemini&utm_source=gemini&utm_campaign=gem-default" target="_blank" rel="noopener noreferrer">
                                 <img src="Peta-lokasi-operasional-jasa-bobok-coring-potong-bongkar-beton-baja-bandung.webp" alt="Peta Jangkauan Layanan Sewa Alat Berat PT Mandiri Bersama" width="1040" height="600" loading="lazy">
                                 <div class="map-overlay">
-                                    <div class="btn btn-primary" style="pointer-events:none; border-radius: 50px; font-weight: 700;">📍 Buka Rute di Google Maps ↗</div>
+                                    <div class="btn btn-outline-glow">📍 Buka Rute di Google Maps ↗</div>
                                 </div>
                             </a>
                         </div>
