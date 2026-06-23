@@ -3,247 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Jasa Coring Beton Bandung Raya | Pemotongan Baja Presisi Tanpa Getaran</title>
-    <meta name="description" content="Jangan korbankan struktur bangunan Anda! PT. Mandiri Bersama spesialis jasa coring beton Bandung, potong & bongkar beton baja tanpa getaran merusak. Ekstra Cepat & Garansi.">
-    <meta name="keywords" content="Jasa Coring Beton Bandung, Spesialis Coring, Tukang Potong Beton, Vendor Pembongkaran Beton Baja, Ahli Pemotongan Beton Tanpa Retak, Harga Coring Beton Cimahi">
+    <title>Jasa Coring Beton Bandung Raya | Pemotongan Baja Presisi</title>
+    <meta name="description" content="PT. Mandiri Bersama spesialis jasa coring beton Bandung, potong & bongkar beton baja tanpa getaran merusak. Hasil rapi, aman, dan ekstra cepat.">
+    <meta name="keywords" content="Jasa Coring Beton Bandung, Spesialis Coring, Tukang Potong Beton, Vendor Pembongkaran Beton Baja, Ahli Pemotongan Beton Tanpa Retak">
     <meta name="theme-color" content="#090a0c">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
-        /* VANILLA CSS MURNI - ZERO BLOAT - AURA.BUILD INSPIRED */
+        /* AURA.BUILD EXACT TEMPLATE VARIABLES & VANILLA CSS - ZERO BLOAT */
         :root {
             --bg: #090a0c;
-            --bg-panel: #131720;
-            --bg-card: rgba(255, 255, 255, 0.03);
-            --line: rgba(255, 255, 255, 0.08);
-            --line-soft: rgba(255, 255, 255, 0.04);
-            --text-main: #f4f5f7;
-            --text-muted: #9598a3;
-            --accent-cyan: #4fd1e0;
-            --accent-indigo: #6b7cff;
-            --accent-red: #ff5c5c;
-            --radius-md: 12px;
-            --radius-lg: 24px;
+            --bg-2: #0c0e12;
+            --panel: #0f1217;
+            --panel-2: #131720;
+            --line: rgba(255,255,255,.08);
+            --line-soft: rgba(255,255,255,.05);
+            --text: #f4f5f7;
+            --muted: #9598a3;
+            --faint: #6b6e78;
+            --accent: #6b7cff;      /* muted periwinkle */
+            --accent-2: #8e7bff;    /* soft violet */
+            --accent-3: #4fd1e0;    /* soft cyan */
+            --accent-wa: #25D366;   /* whatsapp green */
+            --r: 16px;
+            --r-lg: 24px;
+            --maxw: 1140px;
+            --font: 'Inter', system-ui, -apple-system, sans-serif;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            background-color: var(--bg);
-            color: var(--text-main);
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text);
             line-height: 1.6;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
+            letter-spacing: -.011em;
         }
-
-        /* BACKGROUND EFFECTS */
-        .bg-grid {
-            position: fixed; inset: 0; z-index: -2;
-            background-image: 
-                linear-gradient(var(--line-soft) 1px, transparent 1px),
-                linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
-            background-size: 40px 40px;
-            mask-image: radial-gradient(ellipse 80% 50% at 50% 0%, #000 30%, transparent 100%);
-            -webkit-mask-image: radial-gradient(ellipse 80% 50% at 50% 0%, #000 30%, transparent 100%);
+        
+        ::selection { background: rgba(107,124,255,.32); }
+        a { color: inherit; text-decoration: none; }
+        h1, h2, h3, h4 { line-height: 1.1; letter-spacing: -.03em; font-weight: 600; }
+        .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+        
+        .accent { color: var(--accent); }
+        .grad-text {
+            background: linear-gradient(100deg, #fff 30%, #9aa6ff 70%, #67d6e6);
+            -webkit-background-clip: text; background-clip: text; color: transparent;
         }
-        .bg-glow {
-            position: fixed; inset: 0; z-index: -3;
-            background: radial-gradient(circle at 50% 0%, rgba(107, 124, 255, 0.15), transparent 60%);
-        }
-
-        /* LAYOUT & TYPOGRAPHY */
-        .wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
-        h1, h2, h3 { line-height: 1.2; font-weight: 700; letter-spacing: -0.02em; }
-        p { margin-bottom: 1rem; }
-        .text-gradient {
-            background: linear-gradient(120deg, #fff 30%, var(--accent-indigo) 70%, var(--accent-cyan));
-            -webkit-background-clip: text; color: transparent;
-        }
-        .text-cyan { color: var(--accent-cyan); }
-        .text-red { color: var(--accent-red); }
-
-        /* HEADER & NAV */
-        header {
-            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-            background: rgba(9, 10, 12, 0.8);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--line);
-        }
-        nav { display: flex; align-items: center; justify-content: space-between; height: 70px; }
-        .logo { font-size: 1.2rem; font-weight: 700; display: flex; align-items: center; gap: 8px; }
-        .logo-mark {
-            width: 28px; height: 28px; border-radius: 6px;
-            background: linear-gradient(135deg, var(--accent-indigo), var(--accent-cyan));
-        }
-
+        
         /* BUTTONS */
         .btn {
-            display: inline-flex; align-items: center; gap: 8px;
-            padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 0.95rem;
-            text-decoration: none; transition: all 0.3s ease; border: 1px solid transparent;
-            cursor: pointer;
+            display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px;
+            border-radius: 11px; font-weight: 600; font-size: 14.5px; cursor: pointer;
+            border: 1px solid transparent; transition: background .2s, border-color .2s, transform .2s, box-shadow .2s;
+            white-space: nowrap;
         }
-        .btn-primary {
-            background: linear-gradient(135deg, var(--accent-indigo), var(--accent-cyan));
-            color: #fff; box-shadow: 0 4px 15px rgba(107, 124, 255, 0.3);
-        }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(79, 209, 224, 0.4); }
-        .btn-red {
-            background: #e11d48; color: #fff;
-            box-shadow: 0 4px 15px rgba(225, 29, 72, 0.3);
-            animation: pulse-red 2s infinite;
-        }
-        .btn-outline {
-            background: transparent; border-color: var(--line); color: var(--text-main);
-        }
-        .btn-outline:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.2); }
+        .btn-primary { background: #fff; color: #0a0b0e; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(255,255,255,.12); }
+        .btn-ghost { background: rgba(255,255,255,.04); border-color: var(--line); color: var(--text); }
+        .btn-ghost:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.16); }
+        .btn-accent { background: linear-gradient(120deg, var(--accent), var(--accent-2)); color: #fff; }
+        .btn-accent:hover { transform: translateY(-2px); box-shadow: 0 12px 34px rgba(107,124,255,.4); }
+        .btn-wa { background: linear-gradient(120deg, #128C7E, #25D366); color: #fff; }
+        .btn-wa:hover { transform: translateY(-2px); box-shadow: 0 12px 34px rgba(37, 211, 102, 0.4); }
 
-        /* HERO SECTION */
-        .hero { padding: 160px 0 80px; text-align: center; position: relative; }
+        .eyebrow { display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: .02em; color: var(--accent); margin-bottom: 16px; text-transform: uppercase; }
+        .sec-head { max-width: 660px; margin: 0 auto 56px; text-align: center; }
+        .sec-head h2 { font-size: clamp(28px, 4.2vw, 46px); margin-bottom: 16px; font-weight: 600; }
+        .sec-head p { color: var(--muted); font-size: 18px; font-weight: 400; }
+
+        /* BACKGROUND EFFECTS */
+        .bg-fx {
+            position: fixed; inset: 0; z-index: -2;
+            background: radial-gradient(70% 50% at 50% -10%, rgba(107,124,255,.16), transparent 70%),
+                        radial-gradient(50% 40% at 85% 8%, rgba(79,209,224,.07), transparent 70%);
+        }
+        .grid-bg {
+            position: fixed; inset: 0; z-index: -1;
+            background-image: linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+            background-size: 64px 64px;
+            mask-image: radial-gradient(ellipse 75% 55% at 50% 0%, #000 35%, transparent 100%);
+            -webkit-mask-image: radial-gradient(ellipse 75% 55% at 50% 0%, #000 35%, transparent 100%);
+        }
+
+        /* HEADER NAV */
+        header {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(9,10,12,.72); backdrop-filter: blur(16px); border-bottom: 1px solid var(--line-soft);
+        }
+        nav { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+        .logo { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 18px; }
+        .logo .mark {
+            width: 26px; height: 26px; border-radius: 8px; position: relative;
+            background: linear-gradient(140deg, var(--accent), var(--accent-2));
+            box-shadow: 0 0 0 1px rgba(255,255,255,.08) inset;
+        }
+        .logo .mark::before { content: ""; position: absolute; inset: 7px; border-radius: 50%; background: #fff; opacity: .9; }
+        .nav-links { display: flex; gap: 28px; font-size: 14.5px; color: var(--muted); }
+        .nav-links a:hover { color: var(--text); }
+        .nav-cta { display: flex; gap: 10px; align-items: center; }
+
+        @media(max-width:880px){ .nav-links { display: none; } }
+
+        /* HERO */
+        .hero { padding: 148px 0 70px; text-align: center; position: relative; }
         .badge {
-            display: inline-flex; align-items: center; gap: 8px;
-            padding: 6px 16px; border-radius: 99px;
-            background: rgba(255,255,255,0.03); border: 1px solid var(--line);
-            font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px;
+            display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px 6px 8px;
+            border-radius: 999px; background: rgba(255,255,255,.04); border: 1px solid var(--line);
+            font-size: 13px; color: var(--muted); margin-bottom: 28px;
         }
-        .badge b { color: var(--accent-cyan); }
-        .hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); margin-bottom: 24px; }
-        .hero p.lead { font-size: 1.1rem; color: var(--text-muted); max-width: 800px; margin: 0 auto 32px; }
-        .cta-group { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-        .hero-img-container {
-            margin-top: 60px; border-radius: var(--radius-lg); overflow: hidden;
-            border: 1px solid var(--line); box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-            position: relative;
+        .badge b {
+            background: linear-gradient(120deg, var(--accent), var(--accent-2)); color: #fff;
+            font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 999px; letter-spacing: .02em;
         }
-        .hero-img-container::after {
-            content: ''; position: absolute; inset: 0;
-            background: linear-gradient(to top, var(--bg) 0%, transparent 40%);
-        }
-        .hero-img { width: 100%; display: block; object-fit: cover; }
+        .hero h1 { font-size: clamp(38px, 6vw, 72px); font-weight: 700; letter-spacing: -.035em; margin-bottom: 22px; }
+        .hero p.lead { font-size: clamp(16px, 2vw, 20px); color: var(--muted); max-width: 700px; margin: 0 auto 32px; font-weight: 400; }
+        .hero-cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
-        /* TRUST BADGE */
-        .trust-strip {
-            display: flex; justify-content: center; gap: 32px; flex-wrap: wrap;
-            padding: 40px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-            opacity: 0.6; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;
+        /* MOCKUP FRAME FOR MAP */
+        .shot { position: relative; margin: 64px auto 0; max-width: 1000px; }
+        .shot::after {
+            content: ""; position: absolute; inset: -6% -4% -30% -4%; z-index: -1; filter: blur(20px);
+            background: radial-gradient(60% 60% at 50% 0%, rgba(107,124,255,.22), transparent 70%);
+        }
+        .frame {
+            border-radius: var(--r-lg); border: 1px solid var(--line); overflow: hidden; backdrop-filter: blur(8px);
+            background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.012));
+            box-shadow: 0 30px 90px rgba(0,0,0,.55);
+        }
+        .frame-bar { display: flex; align-items: center; gap: 7px; padding: 12px 16px; border-bottom: 1px solid var(--line-soft); background: rgba(9,10,12,.5); }
+        .frame-bar i { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,.14); }
+        .frame-bar span { margin-left: 12px; font-size: 12px; color: var(--faint); font-family: monospace; }
+        .app-main { position: relative; line-height: 0; }
+        .app-main img { width: 100%; height: auto; display: block; border-bottom-left-radius: var(--r-lg); border-bottom-right-radius: var(--r-lg); opacity: 0.9; transition: opacity 0.3s; }
+        .app-main:hover img { opacity: 1; }
+        .map-overlay {
+            position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+            background: rgba(9,10,12,0.4); opacity: 0; transition: opacity 0.3s;
+        }
+        .app-main:hover .map-overlay { opacity: 1; }
+
+        /* MARQUEE LOGOS */
+        .logos { padding: 60px 0 24px; text-align: center; }
+        .logos p { font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); margin-bottom: 26px; }
+        .marquee { overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); }
+        .marquee-track { display: flex; gap: 56px; width: max-content; animation: scrollx 32s linear infinite; }
+        .marquee-track span { font-weight: 600; font-size: 19px; color: var(--faint); white-space: nowrap; opacity: .6; }
+        @keyframes scrollx { to { transform: translateX(-50%); } }
+
+        /* SECTIONS & ROWS */
+        .section { padding: 96px 0; position: relative; }
+        .row { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+        .row + .row { margin-top: 108px; }
+        .row.flip .copy { order: 2; }
+        .copy h2 { font-size: clamp(26px, 3.6vw, 38px); margin-bottom: 16px; font-weight: 600; }
+        .copy p { color: var(--muted); font-size: 16.5px; margin-bottom: 22px; }
+        .ticks { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+        .ticks li { display: flex; gap: 11px; align-items: flex-start; font-size: 15px; color: var(--muted); }
+        .ticks li b { color: var(--text); font-weight: 550; }
+        .ticks svg { width: 18px; height: 18px; flex: none; margin-top: 2px; stroke: var(--accent); stroke-width: 2.2; fill: none; }
+        
+        .visual {
+            border-radius: var(--r-lg); border: 1px solid var(--line); min-height: 300px;
+            background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.01));
+            padding: 22px; position: relative; overflow: hidden; display: flex; align-items: center;
+        }
+        .visual::before { content: ""; position: absolute; inset: 0; background: radial-gradient(80% 60% at 50% 0%, rgba(107,124,255,.1), transparent 70%); }
+        
+        @media(max-width:840px){
+            .row { grid-template-columns: 1fr; gap: 30px; }
+            .row + .row { margin-top: 72px; }
+            .row.flip .copy { order: 0; }
         }
 
-        /* SECTION STYLES */
-        .section { padding: 100px 0; }
-        .sec-head { text-align: center; max-width: 700px; margin: 0 auto 60px; }
-        .eyebrow { display: block; color: var(--accent-cyan); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
-        .sec-head h2 { font-size: clamp(2rem, 3.5vw, 3rem); margin-bottom: 16px; }
-        .sec-head p { color: var(--text-muted); font-size: 1.1rem; }
+        /* GRID FEATURES */
+        .grid6 {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; overflow: hidden;
+            background: var(--line-soft); border: 1px solid var(--line-soft); border-radius: var(--r-lg);
+        }
+        .cell { background: var(--bg); padding: 30px 26px; transition: background .3s; }
+        .cell:hover { background: var(--panel); }
+        .cell .ico {
+            width: 38px; height: 38px; border-radius: 10px; margin-bottom: 16px; display: grid; place-items: center;
+            background: rgba(107,124,255,.12); border: 1px solid rgba(107,124,255,.2); font-size: 18px;
+        }
+        .cell h3 { font-size: 16px; margin-bottom: 7px; font-weight: 600; }
+        .cell p { color: var(--muted); font-size: 14px; }
+        @media(max-width:840px){ .grid6 { grid-template-columns: 1fr 1fr; } }
+        @media(max-width:560px){ .grid6 { grid-template-columns: 1fr; } }
 
-        /* GRID CARDS */
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
-        .card {
-            background: var(--bg-card); border: 1px solid var(--line);
-            border-radius: var(--radius-md); padding: 32px;
-            transition: all 0.3s; backdrop-filter: blur(10px);
-        }
-        .card:hover { border-color: var(--accent-indigo); transform: translateY(-5px); background: rgba(255,255,255,0.05); }
-        .card-icon {
-            width: 48px; height: 48px; border-radius: 12px;
-            background: rgba(107, 124, 255, 0.1); border: 1px solid rgba(107, 124, 255, 0.2);
-            display: flex; align-items: center; justify-content: center; margin-bottom: 24px;
-            color: var(--accent-cyan); font-size: 1.5rem;
+        /* MANIFESTO */
+        .manifesto { padding: 130px 0; text-align: center; }
+        .manifesto .eyebrow { display: block; text-align: center; }
+        .manifesto .big {
+            font-size: clamp(26px, 4.6vw, 52px); font-weight: 600; line-height: 1.28;
+            letter-spacing: -.03em; max-width: 940px; margin: 0 auto; color: var(--text);
         }
 
-        /* PROBLEM SECTION (AGITASI) */
-        .box-alert {
-            background: rgba(225, 29, 72, 0.05); border: 1px solid rgba(225, 29, 72, 0.2);
-            border-radius: var(--radius-lg); padding: 48px; text-align: left;
-            position: relative; overflow: hidden;
+        /* STATS */
+        .stats {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; overflow: hidden;
+            background: var(--line-soft); border: 1px solid var(--line-soft); border-radius: var(--r-lg);
         }
-        .box-alert::before {
-            content: ''; position: absolute; top: -50px; right: -50px;
-            width: 200px; height: 200px; background: radial-gradient(circle, rgba(225,29,72,0.1), transparent 70%);
-        }
-        .box-alert h2 { color: #fff; margin-bottom: 24px; font-size: 2rem; }
-        .alert-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
-        .alert-list li { display: flex; gap: 12px; font-size: 1.1rem; color: #cbd5e1; align-items: flex-start; }
-        .alert-list li::before { content: '❌'; color: var(--accent-red); flex-shrink: 0; }
+        .stat { background: var(--bg); padding: 34px 22px; text-align: center; }
+        .stat .num { font-size: clamp(30px, 4.4vw, 46px); font-weight: 600; letter-spacing: -.03em; }
+        .stat .lab { color: var(--muted); font-size: 13.5px; margin-top: 8px; }
+        @media(max-width:680px){ .stats { grid-template-columns: 1fr 1fr; } }
 
-        /* USP / VALUE PROPOSITION */
-        .usp-list { list-style: none; display: flex; flex-direction: column; gap: 20px; }
-        .usp-list li {
-            display: flex; gap: 16px; align-items: flex-start;
-            background: var(--bg-card); padding: 20px; border-radius: var(--radius-md);
-            border: 1px solid var(--line);
+        /* FAQ NATIVE */
+        .faq { max-width: 780px; margin: 0 auto; }
+        details { border-bottom: 1px solid var(--line-soft); }
+        summary {
+            width: 100%; text-align: left; background: none; border: none; color: var(--text);
+            font-size: 17px; font-weight: 550; padding: 22px 40px 22px 0; cursor: pointer;
+            position: relative; letter-spacing: -.01em; list-style: none;
         }
-        .usp-list li .icon { font-size: 1.5rem; }
-        .usp-list h3 { color: var(--accent-cyan); font-size: 1.1rem; margin-bottom: 4px; }
-        .usp-list p { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
+        summary::-webkit-details-marker { display: none; }
+        summary::after {
+            content: "+"; position: absolute; right: 6px; top: 50%; transform: translateY(-50%);
+            font-size: 22px; color: var(--accent); transition: transform .3s; font-weight: 400;
+        }
+        details[open] summary::after { content: "−"; transform: translateY(-50%) rotate(180deg); }
+        .a { color: var(--muted); font-size: 15px; padding-bottom: 22px; }
 
-        /* LAZY RENDER WRAPPER */
+        /* CTA BOX */
+        .cta-box {
+            position: relative; text-align: center; border-radius: 28px; border: 1px solid var(--line);
+            padding: 76px 28px; overflow: hidden; background: radial-gradient(ellipse at 50% 130%, rgba(107,124,255,.3), transparent 62%), var(--bg-2);
+        }
+        .cta-box h2 { font-size: clamp(30px, 4.6vw, 50px); margin-bottom: 16px; font-weight: 600; }
+        .cta-box p { color: var(--muted); font-size: 17px; max-width: 480px; margin: 0 auto 30px; }
+
+        /* FOOTER */
+        footer { border-top: 1px solid var(--line-soft); padding: 56px 0 40px; margin-top: 30px; }
+        .foot { display: grid; grid-template-columns: 1.6fr repeat(3, 1fr); gap: 32px; }
+        .foot p { color: var(--muted); font-size: 13.5px; margin-top: 14px; max-width: 270px; }
+        .foot h4 { font-size: 12.5px; letter-spacing: .04em; color: var(--faint); margin-bottom: 13px; font-weight: 600; text-transform: uppercase; }
+        .foot a { display: block; color: var(--muted); font-size: 14px; padding: 5px 0; transition: color .2s; }
+        .foot a:hover { color: var(--text); }
+        .foot-bot { display: flex; justify-content: space-between; align-items: center; margin-top: 46px; padding-top: 24px; border-top: 1px solid var(--line-soft); color: var(--faint); font-size: 13px; flex-wrap: wrap; gap: 10px; }
+        
+        .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px;}
+        .tags span { background: rgba(255,255,255,.03); border: 1px solid var(--line-soft); padding: 4px 8px; border-radius: 4px; font-size: 12px; color: var(--faint); }
+        
+        @media(max-width:680px){ .foot { grid-template-columns: 1fr 1fr; } }
+
+        /* LCP & LAZY RENDER FOR SPEED */
         .lazy-render {
             content-visibility: auto;
             contain-intrinsic-size: 1px 1000px;
             contain: paint;
         }
 
-        /* FAQ NATIVE */
-        .faq-container { max-width: 800px; margin: 0 auto; }
-        details {
-            background: var(--bg-card); border: 1px solid var(--line);
-            border-radius: 8px; margin-bottom: 12px; overflow: hidden;
-        }
-        summary {
-            padding: 20px; cursor: pointer; font-weight: 600; font-size: 1.1rem;
-            display: flex; justify-content: space-between; align-items: center;
-            list-style: none;
-        }
-        summary::-webkit-details-marker { display: none; }
-        summary::after { content: '+'; color: var(--accent-cyan); font-size: 1.5rem; }
-        details[open] summary::after { content: '-'; }
-        details p { padding: 0 20px 20px; color: var(--text-muted); margin: 0; }
-
-        /* FOOTER & LSI */
-        footer {
-            border-top: 1px solid var(--line); padding: 60px 0 40px;
-            background: var(--bg-panel); margin-top: 60px;
-        }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
-        .footer-col h3 { font-size: 1.1rem; margin-bottom: 16px; color: #fff; }
-        .footer-col p { color: var(--text-muted); font-size: 0.9rem; }
-        .tags { display: flex; flex-wrap: wrap; gap: 8px; }
-        .tags span {
-            background: rgba(255,255,255,0.05); border: 1px solid var(--line);
-            padding: 6px 12px; border-radius: 4px; font-size: 0.8rem; color: var(--text-muted);
-        }
-        .footer-bottom {
-            text-align: center; border-top: 1px solid var(--line);
-            padding-top: 24px; font-size: 0.85rem; color: var(--text-muted);
-        }
-        .footer-bottom a { color: var(--accent-cyan); text-decoration: none; }
-
-        /* FLOATING CTA */
+        /* STICKY MOBILE WA */
         .sticky-cta {
             position: fixed; bottom: 24px; right: 24px; z-index: 999;
-            background: #25D366; color: #fff; text-decoration: none;
-            padding: 14px 24px; border-radius: 50px; font-weight: 700;
-            display: flex; align-items: center; gap: 10px;
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
-            animation: pulse-wa 2s infinite; border: 2px solid #fff;
+            background: #25D366; color: #fff; padding: 14px 24px; border-radius: 50px;
+            font-weight: 600; font-size: 15px; display: flex; align-items: center; gap: 10px;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4); border: 1px solid rgba(255,255,255,0.2);
+            animation: pulse-wa 2s infinite; text-decoration: none;
         }
-
-        /* ANIMATIONS */
         @keyframes pulse-wa {
             0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
             70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
             100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
-        @keyframes pulse-red {
-            0% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(225, 29, 72, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0); }
-        }
-
-        /* MOBILE FIX */
         @media (max-width: 768px) { 
-            body { padding-bottom: 120px !important; } 
-            .hero h1 { font-size: 2rem; }
-            .box-alert { padding: 32px 20px; }
+            body { padding-bottom: 100px !important; } 
             .sticky-cta { bottom: 20px; right: 20px; left: 20px; justify-content: center; }
         }
     </style>
@@ -256,14 +287,16 @@
           "@type": "LocalBusiness",
           "@id": "https://jasa-coring-bongkar-beton-baja.vercel.app/#organization",
           "name": "PT. Mandiri Bersama",
-          "description": "Spesialis Coring, Pemotongan (Concrete Cutting), dan Pembongkaran Beton Baja dengan teknologi diamond cutting modern tanpa getaran di Bandung Raya.",
+          "description": "Coring & Concrete Cutting Demolition Specialist. Jasa potong dan bongkar beton baja tanpa getaran di Bandung Raya.",
           "url": "https://jasa-coring-bongkar-beton-baja.vercel.app/",
-          "telephone": "+628111222333",
+          "telephone": "+6285283212205",
           "priceRange": "$$",
           "address": {
             "@type": "PostalAddress",
-            "addressLocality": "Bandung",
+            "streetAddress": "Jl. Cibuntu Barat No.37, Wr. Muncang",
+            "addressLocality": "Kec. Bandung Kulon, Kota Bandung",
             "addressRegion": "Jawa Barat",
+            "postalCode": "40211",
             "addressCountry": "ID"
           },
           "areaServed": ["Kota Bandung", "Kabupaten Bandung", "Kota Cimahi", "Kabupaten Bandung Barat"]
@@ -274,34 +307,26 @@
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "Berapa harga jasa coring beton di Bandung per titik?",
+              "name": "Berapa biaya jasa coring beton di Bandung?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Harga jasa coring beton sangat bervariasi tergantung diameter dan tingkat kekerasan material. Kami memberikan penawaran harga terbaik setelah survei lokasi gratis untuk memastikan efisiensi anggaran Anda tanpa biaya tersembunyi."
+                "text": "Biaya dihitung berdasarkan titik diameter dan ketebalan beton. Kami sediakan survei gratis se-Bandung Raya untuk estimasi pasti tanpa biaya tersembunyi."
               }
             },
             {
               "@type": "Question",
-              "name": "Apa bedanya pembongkaran dengan Diamond Cutting vs Bobok Manual?",
+              "name": "Cara mengatasi proyek pembongkaran yang alot?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Diamond cutting menggunakan pisau tajam khusus yang menghasilkan potongan presisi tingkat tinggi tanpa getaran merusak struktur sisa, sementara bobok manual (jackhammer) memicu keretakan bangunan dan memakan waktu lama."
+                "text": "Tinggalkan palu manual atau jackhammer. Kami atasi dengan mesin Diamond Cutting yang terbukti presisi, cepat, dan 100% aman bagi struktur sisa."
               }
             },
             {
               "@type": "Question",
-              "name": "Apakah melayani pemotongan struktur beton untuk area perumahan padat?",
+              "name": "Di mana jasa terdekat pemotongan beton tanpa retak?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Tentu saja. Teknologi mesin potong beton modern kami didesain khusus agar minim kebisingan dan bebas debu ekstrem, sehingga sangat aman diaplikasikan di perumahan padat maupun area komersial yang sedang beroperasi."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Berapa lama waktu yang dibutuhkan untuk survei ke lokasi proyek?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Tim spesialis concrete cutting kami siap meluncur ke seluruh area Bandung Raya (Kota, Kabupaten, Cimahi, Bandung Barat) pada hari yang sama setelah Anda menghubungi layanan WhatsApp darurat kami."
+                "text": "PT. Mandiri Bersama menjangkau seluruh Bandung Kulon, Astanaanyar, Margahayu, Cimahi, hingga Bandung Barat dengan respon darurat pada hari yang sama."
               }
             }
           ]
@@ -310,7 +335,7 @@
           "@type": "WebPage",
           "@id": "https://jasa-coring-bongkar-beton-baja.vercel.app/#webpage",
           "url": "https://jasa-coring-bongkar-beton-baja.vercel.app/",
-          "name": "Jasa Coring Beton Bandung Raya | Pemotongan Baja Presisi",
+          "name": "Jasa Coring Beton Bandung | Potong & Bongkar Baja",
           "relatedLink": [
             "https://dongkrakusaha.com/layanan-jasa-coring-beton-bandung-kulon-tanpa-getaran",
             "https://dongkrakusaha.com/layanan-tukang-potong-beton-astanaanyar-babakan-ciparay-presisi",
@@ -327,18 +352,23 @@
 </head>
 <body>
 
-    <div class="bg-glow"></div>
-    <div class="bg-grid"></div>
+    <div class="bg-fx"></div>
+    <div class="grid-bg"></div>
 
-    <header>
+    <header id="header">
         <div class="wrap">
             <nav>
                 <div class="logo">
-                    <span class="logo-mark"></span>
+                    <span class="mark"></span>
                     PT. Mandiri Bersama
                 </div>
-                <div>
-                    <a href="https://wa.me/628111222333?text=*Halo Admin PT. Mandiri Bersama, saya tertarik dengan layanan Jasa Coring Beton dan butuh survei segera...*" class="btn btn-primary" target="_blank">📞 Hubungi Kami</a>
+                <div class="nav-links">
+                    <a href="#platform">Solusi</a>
+                    <a href="#how">Cara Kerja</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+                <div class="nav-cta">
+                    <a href="https://wa.me/6285283212205?text=*Halo Admin PT. Mandiri Bersama, saya butuh bantuan Jasa Coring Beton segera...*" target="_blank" class="btn btn-primary">Konsultasi Gratis</a>
                 </div>
             </nav>
         </div>
@@ -347,83 +377,103 @@
     <section class="hero">
         <div class="wrap">
             <div class="badge">
-                <b>⭐ TERBAIK</b> Spesialis Pembongkaran Beton #1 di Bandung Raya
+                <b>⭐ BUKA 24 JAM</b> Spesialis Pembongkaran Beton & Baja
             </div>
             
             <h1>
                 JASA CORING BETON BANDUNG: <br>
-                <span class="text-gradient">POTONG & BONGKAR BAJA</span> TANPA GETARAN MERUSAK!
+                <span class="text-white">POTONG & BONGKAR</span> <span class="grad-text">TANPA GETARAN!</span>
             </h1>
             
             <p class="lead">
-                Jangan korbankan sisa struktur bangunan komersial maupun industri Anda dengan alat bobok manual yang berisiko. Kami menggunakan teknologi Diamond Cutting mutakhir. Hasil potongan super presisi, pengerjaan ekstra cepat, dan 100% dieksekusi langsung oleh operator bersertifikat.
+                Awas struktur gedung retak! Jangan korbankan sisa bangunan Anda. Kami adalah spesialis Coring & Concrete Cutting yang mengeksekusi proyek dengan presisi tingkat tinggi, ekstra cepat, dan ditangani langsung oleh operator bersertifikat.
             </p>
             
-            <div class="cta-group">
-                <a href="https://wa.me/628111222333?text=*Halo Admin PT. Mandiri Bersama, saya butuh Jasa Coring Beton secepatnya. Tolong jadwalkan survei gratis...*" class="btn btn-red" target="_blank">🚨 KONSULTASI & SURVEI GRATIS</a>
-                <a href="#solusi" class="btn btn-outline">📄 LIHAT LAYANAN KAMI</a>
+            <div class="hero-cta">
+                <a href="https://wa.me/6285283212205?text=*Halo Admin PT. Mandiri Bersama, saya tertarik dengan layanan Jasa Coring Beton. Tolong jadwalkan survei lokasi...*" target="_blank" class="btn btn-accent">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="margin-right:4px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                    Panggil Tim Survei Gratis
+                </a>
+                <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x2e68e5d5f0a0549b:0xe787630c66e76303?entry=gemini&utm_source=gemini&utm_campaign=gem-default" target="_blank" class="btn btn-ghost">📍 Navigasi ke Lokasi</a>
             </div>
 
-            <div class="hero-img-container">
-                <img src="https://placehold.co/1140x500/111/4fd1e0/webp?text=Spesialis+Coring+Beton+Alat+Modern+Bandung" alt="spesialis-jasa-coring-beton-gedung-bandung-presisi" width="1140" height="500" fetchpriority="high" loading="eager" decoding="sync" class="hero-img">
+            <div class="shot">
+                <div class="frame">
+                    <div class="frame-bar">
+                        <i></i><i></i><i></i>
+                        <span>maps.google.com / PT. Mandiri Bersama Area Operasional</span>
+                    </div>
+                    <div class="app-main">
+                        <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x2e68e5d5f0a0549b:0xe787630c66e76303?entry=gemini&utm_source=gemini&utm_campaign=gem-default" target="_blank" rel="noopener noreferrer">
+                            <img src="Peta-lokasi-operasional-jasa-bobok-coring-potong-bongkar-beton-baja-bandung.webp" alt="Peta Lokasi Operasional Jasa Coring Beton PT Mandiri Bersama di Bandung" fetchpriority="high" loading="eager" decoding="sync">
+                            <div class="map-overlay">
+                                <span class="btn btn-primary" style="pointer-events:none;">Buka di Google Maps ↗</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <div class="trust-strip">
-        <span>Dipercaya Oleh 500+ Proyek:</span>
-        <span>Gedung Komersial</span> • 
-        <span>Pabrik Industri</span> • 
-        <span>Perumahan Elit</span> • 
-        <span>Fasilitas Publik</span>
+    <div class="logos">
+        <div class="wrap"><p>Area Penanganan Prioritas Tim Kami</p></div>
+        <div class="marquee">
+            <div class="marquee-track">
+                <span>KOTA BANDUNG</span>
+                <span>KABUPATEN BANDUNG</span>
+                <span>CIMAHI</span>
+                <span>BANDUNG BARAT</span>
+                <span>KOTA BANDUNG</span>
+                <span>KABUPATEN BANDUNG</span>
+                <span>CIMAHI</span>
+                <span>BANDUNG BARAT</span>
+            </div>
+        </div>
     </div>
 
     <div class="lazy-render">
 
-        <section class="section">
+        <section class="manifesto">
             <div class="wrap">
-                <div class="box-alert">
-                    <span class="eyebrow text-red">PERINGATAN KERAS UNTUK PEMILIK PROYEK</span>
-                    <h2>PROYEK ANDA MANGKRAK KARENA PEMBONGKARAN ALOT?</h2>
-                    
-                    <p style="font-size: 1.1rem; color: #fff; margin-bottom: 24px;">Hati-hati! Menggunakan tenaga kuli biasa dengan alat manual (Jackhammer) atau vendor abal-abal tanpa sertifikasi hanya akan menyimpan bom waktu bagi aset Anda:</p>
-                    
-                    <ul class="alert-list">
-                        <li><b>Getaran Menghancurkan Tulangan:</b> Risiko fatal retak struktur pada dinding penyangga utama (bearing wall) dan pondasi sisa yang menempel dengan properti tetangga.</li>
-                        <li><b>Downtime Membengkak:</b> Waktu pengerjaan molor berminggu-minggu, biaya operasional dan argo sewa alat berat terus membengkak tanpa kepastian.</li>
-                        <li><b>Mata Bor Patah & Mangkrak:</b> Alat potong murah sering gagal menembus beton bertulang tebal, merusak instalasi pipa, dan menyebabkan proyek terhenti total di tengah jalan.</li>
-                    </ul>
-                    
-                    <p style="margin-top: 32px; font-weight: 700; color: #fff;">Jangan biarkan budget Anda bocor. Hentikan kerugian finansial ini sekarang juga!</p>
-                </div>
+                <span class="eyebrow">RISIKO FATAL METODE KUNO</span>
+                <p class="big">
+                    Pabrik stop operasi karena bongkar lambat? <br>
+                    Proyek di Cimahi mangkrak? <br>
+                    Jangan pertaruhkan <span class="grad-text">aset miliaran</span> Anda dengan metode bobok manual yang memicu retak struktur!
+                </p>
             </div>
         </section>
 
-        <section id="solusi" class="section" style="background: var(--bg-panel); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+        <section class="section" id="platform">
             <div class="wrap">
-                <div class="sec-head">
-                    <span class="eyebrow">SOLUSI KONSTRUKSI MASA DEPAN</span>
-                    <h2>KAMI HADIR MEMBAWA TEKNOLOGI MODERN & PRESISI TINGGI</h2>
-                    <p>Sebagai bukti transparansi, kami selalu buatkan hooks dengan keyword yang relevan sesuai dengan niche pembongkaran untuk memastikan Anda mendapat solusi teknis terbaik yang direkomendasikan secara faktual.</p>
+                <div class="row">
+                    <div class="copy">
+                        <span class="eyebrow">Teknologi Terkini</span>
+                        <h2>Jasa Coring Beton Presisi</h2>
+                        <p>Pembuatan lubang silinder sempurna menembus beton bertulang baja. Tanpa retak, tanpa menghancurkan dinding penyangga utama gedung tua Anda.</p>
+                        <ul class="ticks">
+                            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg> <span><b>Diamond Cutting.</b> Menembus material paling keras.</span></li>
+                            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg> <span><b>Zero Vibration.</b> 100% aman untuk struktur sisa.</span></li>
+                        </ul>
+                    </div>
+                    <div class="visual" style="justify-content: center;">
+                        <h3 class="grad-text" style="font-size: 3rem; text-align: center;">PRESISI<br>MUTLAK</h3>
+                    </div>
                 </div>
 
-                <div class="grid-3">
-                    <div class="card">
-                        <div class="card-icon">🎯</div>
-                        <h3>Jasa Coring Beton</h3>
-                        <p>Pembuatan lubang silinder sempurna untuk jalur instalasi pipa air, kabel listrik, dan sistem ventilasi (HVAC) tanpa menimbulkan retakan mikro pada dinding samping.</p>
+                <div class="row flip">
+                    <div class="copy">
+                        <span class="eyebrow">Eksekusi Industri Berat</span>
+                        <h2>Concrete Cutting & Bongkar Baja</h2>
+                        <p>Hentikan kerugian finansial akibat downtime pabrik. Kami mengeksekusi pembongkaran pondasi mesin dan struktur baja dengan alat berat khusus, ekstra cepat, dan selesai tepat waktu.</p>
+                        <ul class="ticks">
+                            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg> <span><b>Operator K3.</b> Ditangani langsung ahlinya.</span></li>
+                            <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg> <span><b>Garansi Waktu.</b> Argo proyek lebih hemat.</span></li>
+                        </ul>
                     </div>
-                    
-                    <div class="card">
-                        <div class="card-icon">⚙️</div>
-                        <h3>Concrete Cutting</h3>
-                        <p>Spesialis pemotongan presisi tinggi menggunakan pisau diamond untuk modifikasi dinding, lantai beton, aspal, hingga struktur beton bertulang paling keras secara mulus.</p>
-                    </div>
-                    
-                    <div class="card">
-                        <div class="card-icon">🏗️</div>
-                        <h3>Pembongkaran Baja</h3>
-                        <p>Eksekusi penghancuran dan pembongkaran fondasi mesin pabrik industri menggunakan alat berat khusus yang dikalibrasi untuk bekerja ekstra cepat dan bebas debu ekstrem.</p>
+                    <div class="visual" style="justify-content: center; text-align:center;">
+                         <h3 class="grad-text" style="font-size: 3rem; text-align: center;">BEBAS<br>DOWNTIME</h3>
                     </div>
                 </div>
             </div>
@@ -432,137 +482,157 @@
         <section class="section">
             <div class="wrap">
                 <div class="sec-head">
-                    <span class="eyebrow">NILAI LEBIH (USP)</span>
-                    <h2>MENGAPA PT. MANDIRI BERSAMA ADALAH PILIHAN MUTLAK?</h2>
-                    <p>Banyak vendor yang berani memberi janji, namun hanya kami yang berani memberi jaminan keamanan struktur secara tertulis.</p>
+                    <span class="eyebrow">Keunggulan Layanan</span>
+                    <h2>Coring Modern vs Bobok Manual</h2>
+                    <p>Fakta mengejutkan mengapa Anda harus meninggalkan cara kuno pemecah beton (jackhammer) sekarang juga demi keselamatan investasi properti Anda.</p>
                 </div>
-
-                <ul class="usp-list" style="max-width: 800px; margin: 0 auto 48px;">
-                    <li>
-                        <div class="icon">✅</div>
-                        <div>
-                            <h3>Teknologi Diamond Cutting Murni</h3>
-                            <p>Mesin bor dan gergaji kami diimpor langsung, dijamin mampu menembus beton bertulang baja paling tebal sekalipun tanpa kendala mata bor patah.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="icon">✅</div>
-                        <div>
-                            <h3>Tanpa Getaran (Zero Vibration)</h3>
-                            <p>Metode pemotongan statis kami menjamin 100% integritas struktur sisa bangunan utama Anda tetap aman dari retak tersembunyi yang berbahaya.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="icon">✅</div>
-                        <div>
-                            <h3>Ekstra Cepat & Tepat Waktu</h3>
-                            <p>Kami sangat memahami bahwa waktu adalah uang. Ritme kerja cepat kami sukses mengurangi downtime mesin pabrik dan mempercepat handover ruko komersial.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="icon">✅</div>
-                        <div>
-                            <h3>Ditangani Operator Bersertifikat</h3>
-                            <p>Bukan kuli sembarangan. Setiap personel lapangan kami telah lulus standar K3 konstruksi ketat untuk meminimalisir kecelakaan kerja di proyek Anda.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="icon">✅</div>
-                        <div>
-                            <h3>Siap Survei Se-Bandung Raya</h3>
-                            <p>Tim ahli kami selalu siaga menjangkau lokasi proyek di Kota Bandung, Kabupaten Bandung, area industri, Cimahi, hingga kawasan perbukitan Bandung Barat.</p>
-                        </div>
-                    </li>
-                </ul>
-
-                <div style="text-align: center; padding: 40px; background: rgba(79, 209, 224, 0.05); border-radius: var(--radius-lg); border: 1px solid rgba(79, 209, 224, 0.2);">
-                    <h3 style="margin-bottom: 16px; font-size: 1.5rem;">Waktu Berjalan, Argo Proyek Terus Berputar!</h3>
-                    <p style="color: var(--text-muted); margin-bottom: 24px;">Jangan tunggu sampai kerugian Anda membengkak karena salah pilih vendor pembongkaran.</p>
-                    <a href="https://wa.me/628111222333?text=*Halo Admin, tolong segera kirimkan tim survei ke lokasi proyek saya di Bandung...*" class="btn btn-primary" target="_blank" style="font-size: 1.1rem; padding: 16px 32px;">📲 PANGGIL TIM SURVEI KE LOKASI SEKARANG!</a>
+                <div class="grid6">
+                    <div class="cell">
+                        <div class="ico">🚀</div>
+                        <h3>Ekstra Cepat</h3>
+                        <p>Hemat waktu proyek berminggu-minggu dengan alat berkecepatan tinggi.</p>
+                    </div>
+                    <div class="cell">
+                        <div class="ico">🛡️</div>
+                        <h3>Tanpa Getaran</h3>
+                        <p>Melindungi dinding penahan tanah dan fondasi di kawasan rawan longsor.</p>
+                    </div>
+                    <div class="cell">
+                        <div class="ico">📐</div>
+                        <h3>Sangat Rapi</h3>
+                        <p>Hasil potongan rapi, tidak perlu biaya tambahan untuk menambal sisa coran.</p>
+                    </div>
+                    <div class="cell">
+                        <div class="ico">💰</div>
+                        <h3>Hemat Biaya</h3>
+                        <p>Cegah over-budget akibat mata bor patah atau kerusakan instalasi kabel/pipa.</p>
+                    </div>
+                    <div class="cell">
+                        <div class="ico">👷</div>
+                        <h3>Bersertifikat</h3>
+                        <p>Setiap operator kami wajib mematuhi standar keselamatan proyek skala industri.</p>
+                    </div>
+                    <div class="cell">
+                        <div class="ico">🤝</div>
+                        <h3>Survei Gratis</h3>
+                        <p>Kami buatkan hooks dengan keyword yang relevan sesuai dengan niche pembongkaran saat tim meluncur ke Bandung Kulon hingga Margahayu.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="section" style="background: var(--bg-panel);">
+        <section class="section">
+            <div class="wrap">
+                <div class="stats">
+                    <div class="stat">
+                        <div class="num grad-text">500+</div>
+                        <div class="lab">Proyek Diselesaikan</div>
+                    </div>
+                    <div class="stat">
+                        <div class="num grad-text">24</div>
+                        <div class="lab">Jam Siap Melayani</div>
+                    </div>
+                    <div class="stat">
+                        <div class="num grad-text">100%</div>
+                        <div class="lab">Hasil Potong Presisi</div>
+                    </div>
+                    <div class="stat">
+                        <div class="num grad-text">0</div>
+                        <div class="lab">Insiden Retak Struktur</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
             <div class="wrap">
                 <div class="sec-head">
-                    <span class="eyebrow">ANSWER ENGINE OPTIMIZATION</span>
-                    <h2>PERTANYAAN TERKAIT (FAQ SINGKAT)</h2>
-                    <p>Informasi faktual dan transparan seputar layanan jasa coring beton kami.</p>
+                    <span class="eyebrow">AEO / FAQ SINGKAT</span>
+                    <h2>Pertanyaan Terkait</h2>
                 </div>
+                <div class="faq">
+                    <details>
+                        <summary>Berapa biaya jasa coring beton di Bandung?</summary>
+                        <div class="a">Harga jasa bervariasi bergantung pada kedalaman, diameter lubang, dan tingkat kekerasan beton baja. Kami pastikan Anda mendapat harga terbaik setelah tim kami melakukan survei lokasi secara gratis se-Bandung Raya.</div>
+                    </details>
+                    <details>
+                        <summary>Cara mengatasi pemotongan beton tanpa merusak tulangan?</summary>
+                        <div class="a">Solusi tunggalnya adalah menggunakan mesin coring dengan mata pisau diamond cutting modern. Alat ini beroperasi secara statis (bebas getaran) sehingga mencegah retak mikro pada sisa bangunan ruko atau gedung Anda.</div>
+                    </details>
+                    <details>
+                        <summary>Di mana jasa terdekat spesialis coring di wilayah saya?</summary>
+                        <div class="a">PT. Mandiri Bersama berpusat di Cibuntu Barat, Bandung Kulon. Kami memiliki unit armada reaksi cepat yang siap menjangkau area komersial Kota Bandung, kawasan pabrik Kabupaten Bandung, Cimahi, hingga perbukitan Bandung Barat pada hari yang sama.</div>
+                    </details>
+                </div>
+            </div>
+        </section>
 
-                <div class="faq-container">
-                    <details>
-                        <summary>Berapa harga jasa coring beton di Bandung per titik?</summary>
-                        <p>Harga jasa coring beton sangat bervariasi tergantung diameter dan tingkat kekerasan material. Kami memberikan penawaran harga terbaik setelah survei lokasi gratis untuk memastikan efisiensi anggaran Anda tanpa biaya tersembunyi.</p>
-                    </details>
-                    
-                    <details>
-                        <summary>Apa bedanya pembongkaran dengan Diamond Cutting vs Bobok Manual?</summary>
-                        <p>Diamond cutting menggunakan pisau tajam khusus yang menghasilkan potongan presisi tingkat tinggi tanpa getaran merusak struktur sisa, sementara bobok manual (jackhammer) memicu keretakan bangunan dan memakan waktu lama.</p>
-                    </details>
-                    
-                    <details>
-                        <summary>Apakah melayani pemotongan struktur beton untuk area perumahan padat?</summary>
-                        <p>Tentu saja. Teknologi mesin potong beton modern kami didesain khusus agar minim kebisingan dan bebas debu ekstrem, sehingga sangat aman diaplikasikan di perumahan padat maupun area komersial yang sedang beroperasi.</p>
-                    </details>
-                    
-                    <details>
-                        <summary>Berapa lama waktu yang dibutuhkan untuk survei ke lokasi proyek?</summary>
-                        <p>Tim spesialis concrete cutting kami siap meluncur ke seluruh area Bandung Raya (Kota, Kabupaten, Cimahi, Bandung Barat) pada hari yang sama setelah Anda menghubungi layanan WhatsApp darurat kami.</p>
-                    </details>
+        <section class="section" id="cta">
+            <div class="wrap">
+                <div class="cta-box">
+                    <h2>Amankan Jadwal Proyek Anda Hari Ini!</h2>
+                    <p>Jangan biarkan mandor atau vendor tak berpengalaman merusak konstruksi Anda. Percayakan pada ahlinya.</p>
+                    <div class="hero-cta">
+                        <a href="https://wa.me/6285283212205?text=*Halo Admin PT. Mandiri Bersama, saya butuh bantuan darurat untuk jasa coring beton / potong baja...*" target="_blank" class="btn btn-primary" style="padding: 14px 28px; font-size: 16px;">💬 Chat WhatsApp Sekarang</a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <footer>
             <div class="wrap">
-                <div class="footer-grid">
-                    <div class="footer-col">
-                        <h3>PT. MANDIRI BERSAMA</h3>
-                        <p>Spesialis Jasa Coring Beton Bandung Raya, Pemotongan (Concrete Cutting) presisi tinggi, dan Vendor Pembongkaran Baja bergaransi aman tanpa getaran.</p>
-                        <p style="margin-top: 16px;">
-                            📍 Melayani Seluruh Wilayah Bandung<br>
-                            📞 +62 811-1222-333<br>
-                            ✉️ cs@jasacoringbandung.co.id
+                <div class="foot">
+                    <div>
+                        <div class="logo">
+                            <span class="mark"></span>
+                            PT. Mandiri Bersama
+                        </div>
+                        <p>Coring & Concrete Cutting Demolition Specialist. Pakar potong dan bongkar beton baja tanpa getaran.</p>
+                        <p style="margin-top:20px; color:var(--text);">
+                            Jl. Cibuntu Barat No.37, Wr. Muncang<br>
+                            Kec. Bandung Kulon, Kota Bandung<br>
+                            Jawa Barat 40211<br><br>
+                            <b>Telepon / WA:</b> 6285283212205
                         </p>
                     </div>
-                    
-                    <div class="footer-col">
-                        <h3>Area Layanan Utama</h3>
-                        <ul style="list-style: none; color: var(--text-muted); line-height: 2;">
-                            <li>• Kota Bandung (Komersial)</li>
-                            <li>• Kabupaten Bandung (Industri)</li>
-                            <li>• Kota Cimahi (Residensial)</li>
-                            <li>• Bandung Barat (Villa & Perbukitan)</li>
-                        </ul>
+                    <div>
+                        <h4>Area Layanan Makro</h4>
+                        <a href="#">Kota Bandung</a>
+                        <a href="#">Kabupaten Bandung</a>
+                        <a href="#">Kota Cimahi</a>
+                        <a href="#">Bandung Barat</a>
                     </div>
-
-                    <div class="footer-col">
-                        <h3>Pencarian Terkait (Tags)</h3>
+                    <div>
+                        <h4>Area Layanan Mikro</h4>
+                        <a href="#">Bandung Kulon & Andir</a>
+                        <a href="#">Astanaanyar</a>
+                        <a href="#">Babakan Ciparay</a>
+                        <a href="#">Margahayu</a>
+                    </div>
+                    <div>
+                        <h4>Pencarian Terkait (Tags)</h4>
                         <div class="tags">
                             <span>Jasa Coring Beton Bandung</span>
-                            <span>Spesialis Coring</span>
-                            <span>Harga Coring Lantai Beton</span>
-                            <span>Tukang Potong Beton</span>
-                            <span>Vendor Pembongkaran Beton Baja</span>
-                            <span>Ahli Pemotongan Beton Tanpa Retak</span>
-                            <span>Concrete Cutting Alat Modern</span>
+                            <span>Tukang Potong Beton Presisi</span>
+                            <span>Vendor Pembongkaran Baja</span>
+                            <span>Ahli Pemotongan Tanpa Retak</span>
+                            <span>Biaya Coring Lantai</span>
+                            <span>Diamond Cutting Industri</span>
                         </div>
                     </div>
                 </div>
-
-                <div class="footer-bottom">
-                    SEO & Web Development by <a href="https://ciledugpromo.biz.id" target="_blank" rel="nofollow noopener noreferrer">ciledugpromo.biz.id</a> | Hak Cipta Dilindungi Undang-Undang &copy; 2026.
+                <div class="foot-bot">
+                    <span>SEO & Web Development by <a href="https://ciledugpromo.biz.id" target="_blank" rel="nofollow noopener noreferrer">ciledugpromo.biz.id</a></span>
+                    <span>© 2026 PT. Mandiri Bersama. All rights reserved.</span>
                 </div>
             </div>
         </footer>
 
-    </div> <a href="https://wa.me/628111222333?text=*Halo Admin PT. Mandiri Bersama, saya tertarik dengan layanan Jasa Coring Beton. Tolong bantu masalah saya terkait pembongkaran yang alot...*" class="sticky-cta" target="_blank">
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+    </div> <a href="https://wa.me/6285283212205?text=*Halo Admin PT. Mandiri Bersama, saya tertarik dengan layanan Jasa Coring Beton. Tolong jadwalkan survei...*" target="_blank" class="sticky-cta">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
         </svg>
-        PANGGIL TIM SURVEI
+        Chat WA Sekarang
     </a>
 
 </body>
